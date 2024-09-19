@@ -123,6 +123,7 @@ def remove_layer(X, jacobian_estimator):
     return new_X, leafs
 
 def identify(X, jacobian_estimator):
+    U_dim = X.shape[1] #Can be a passed parameter, once you determine latent dimension
     layers = []
     U_estimates = np.empty((X.shape[0],0))
     while X.shape[1]:
@@ -132,8 +133,8 @@ def identify(X, jacobian_estimator):
 
         X, leafs = remove_layer(X, jacobian_estimator)
         print(f'Peeled off {leafs.shape[1]} nodes.')
-        layers.append([U_estimates.shape[1]+i for i in range(leafs.shape[1])])
+        layers.append([U_dim-U_estimates.shape[1]-i-1 for i in range(leafs.shape[1])])
         U_estimates = np.hstack((leafs, U_estimates))
         
-    return U_estimates, layers
+    return U_estimates, layers[::-1]
 

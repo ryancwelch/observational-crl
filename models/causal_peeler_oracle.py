@@ -100,6 +100,7 @@ def remove_layer(graph, U, G):
     return graph, new_U, new_G, leafs
 
 def identify(graph, U, G):
+    U_dim = U.shape[1]
     layers = []
     U_estimates = np.empty((U.shape[0],0))
     while graph.nnodes:
@@ -108,8 +109,7 @@ def identify(graph, U, G):
         print('-----------------------------------------------------------')
         graph, U, G, leafs = remove_layer(graph, U, G)
         print(f'Peeled off {leafs.shape[1]} nodes.')
-        layers.append([U_estimates.shape[1]+i for i in range(leafs.shape[1])])
+        layers.append([U_dim-U_estimates.shape[1]-i-1 for i in range(leafs.shape[1])])
         U_estimates = np.hstack((leafs, U_estimates))
         
-    return U_estimates, layers
-    return torch.from_numpy(U_estimates, dtype=torch.float32), layers
+    return U_estimates, layers[::-1]
