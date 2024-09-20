@@ -20,6 +20,14 @@ torchvision==0.17.2
 ```
 Install Gurobi, which is the state-of-the-art optimization solver for quadratic programs, using their [official instuctions](https://www.gurobi.com/).
 
+Install the remaining requirements using the following command:
+```
+ pip install -r requirements.txt
+```
+
+ ## Running Experiments
+
+
 
 
 
