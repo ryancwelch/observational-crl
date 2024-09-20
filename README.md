@@ -11,7 +11,7 @@ This repository contains an implementation of the necessary algorithms to recove
  To create a new conda environment, open terminal and run this command:
  
 ```
- conda create --name dpt python=3.9.15
+ conda create --name ocrl python=3.12.2
 ```
 Install PyTorch following their [official instructions](https://pytorch.org/get-started/locally/). We recommend using the following versions or torch and torchvision:
 ```
