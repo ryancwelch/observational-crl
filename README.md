@@ -9,6 +9,19 @@ This repository contains an implementation of the necessary algorithms to recove
  ## Instructions for Setting Up the Environment
 
  To create a new conda environment, open terminal and run this command:
+ 
+```
+ conda create --name dpt python=3.9.15
+```
+Install PyTorch following their [official instructions](https://pytorch.org/get-started/locally/). We recommend using the following versions or torch and torchvision:
+```
+torch==2.2.2
+torchvision==0.17.2
+```
+Install Gurobi, which is the state-of-the-art optimization solver for quadratic programs, using their [official instuctions](https://www.gurobi.com/).
 
- ```conda create --name dpt python=3.9.15 ```
+
+
+
+
 
