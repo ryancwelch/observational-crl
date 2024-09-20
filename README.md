@@ -10,3 +10,5 @@ This repository contains an implementation of the necessary algorithms to recove
 
  To create a new conda environment, open terminal and run this command:
 
+ ```conda create --name dpt python=3.9.15 ```
+
