@@ -29,6 +29,6 @@ Install the remaining requirements using the following command:
 
 Refer to the notebooks folder for experiments of recoving upstream-layer representations of latent variables and single-layer representations of exogenous noise terms in synthethic graphs. ```Score Oracle Simulations.ipynb ``` presents the experiments using perfect score estimation, where the code listed reproduces the results from the specified paper. ```Score Estimation Simulations.ipynb ``` presents experiments using data driven score estimation methods. These notebooks provide templates to easily experiment with different DAG types, number of training examples, and score estimators.
 
-To use these aglorithms on your data, refer to the models folder, where ```causal_peeler.py``` contains the methods to learn upstream-layer representations, and ```noise_estimator.py``` contains the methods to learn single-layer representations of exogenous noise variables.
+To use these algorithms on your data, refer to the models folder, where ```causal_peeler.py``` contains the methods to learn upstream-layer representations, and ```noise_estimator.py``` contains the methods to learn single-layer representations of exogenous noise variables.
 
 
