@@ -27,9 +27,6 @@ Install the remaining requirements using the following command:
 
  ## Running Experiments
 
-
-
-
-
+Refer to the notebooks folder for examples of experiments for recoving upstream-layer representations of latent variables and single-layer representations of exogenous noise terms in synthethic graphs. ```Score Oracle Simulations.ipynb ``` presents the experiments using perfect score estimation, where the code listed reproduces the results from the specified paper. ```Score Estimation Simulations.ipynb ``` presents experiments using data driven score estimation methods.
 
 
