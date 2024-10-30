@@ -9,6 +9,26 @@ This repository contains an implementation of the necessary algorithms to recove
  ## Instructions for Setting Up the Environment
 
  To create a new conda environment, open terminal and run this command:
+ 
+```
+ conda create --name ocrl python=3.12.2
+```
+Install PyTorch following their [official instructions](https://pytorch.org/get-started/locally/). We recommend using the following versions or torch and torchvision:
+```
+torch==2.2.2
+torchvision==0.17.2
+```
+Install Gurobi, which is the state-of-the-art optimization solver for quadratic programs, using their [official instuctions](https://www.gurobi.com/).
 
- ```conda create --name dpt python=3.9.15 ```
+Install the remaining requirements using the following command:
+```
+ pip install -r requirements.txt
+```
+
+ ## Running Experiments
+
+Refer to the notebooks folder for experiments of recoving upstream-layer representations of latent variables and single-layer representations of exogenous noise terms in synthethic graphs. ```Score Oracle Simulations.ipynb ``` presents the experiments using perfect score estimation, where the code listed reproduces the results from the specified paper. ```Score Estimation Simulations.ipynb ``` presents experiments using data driven score estimation methods. These notebooks provide templates to easily experiment with different DAG types, number of training examples, and score estimators.
+
+To use these algorithms on your data, refer to the models folder, where ```causal_peeler.py``` contains the methods to learn upstream-layer representations, and ```noise_estimator.py``` contains the methods to learn single-layer representations of exogenous noise variables.
+
 
