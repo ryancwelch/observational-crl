@@ -1,3 +1,7 @@
+"""
+Code taken/adapted from https://github.com/py-why/dodiscover
+"""
+
 import torch
 import numpy as np
 

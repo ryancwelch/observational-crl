@@ -1,3 +1,7 @@
+"""
+Code taken/adapted from https://github.com/acarturk-e/score-based-crl
+"""
+
 import argparse
 from typing import Callable
 
